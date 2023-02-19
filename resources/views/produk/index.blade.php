@@ -17,7 +17,7 @@
             <div class="btn-group">
                 <button onclick="addForm('{{ route('produk.store') }}')" class="btn btn-primary">+ Produk</button>
                 <button width ="2%" onclick="deleteSelected('{{ route('produk.delete_selected')}}')" class="btn btn-danger"><i class="fa fa-trash"></i>Hapus</button>
-                <button width ="2%" onclick="cetakBarcode('{{ route('produk.cetak_barcode')}}')" class="btn btn-info"><i class="fa fa-barcode"></i>Cetak Barcode</button>
+                
 
             </div>
         </div>
@@ -177,20 +177,7 @@
         }
     }
 
-    function cetakBarcode(url) {
-        if ($('input:checked').length < 1) {
-            alert('Pilih data yang akan dicetak');
-            return;
-        } else if ($('input:checked').length < 3) {
-            alert('Pilih minimal 3 data untuk dicetak');
-            return;
-        } else {
-            $('.form-produk')
-            .attr('target', '_blank')
-                .attr('action', url)
-                .submit();
-            }
-        }
+   
     </script>
 
 
